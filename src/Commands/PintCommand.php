@@ -44,9 +44,9 @@ class PintCommand extends Command
 
         $options = array_slice($argv, 2);
 
-        $binary = base_path('vendor/bin/pint');
+        $binary = 'vendor/bin/pint';
 
-        if (! is_file($binary)) {
+        if (!is_file($binary)) {
             $this->error('Pint is not installed. Run: composer require laravel/pint --dev');
 
             return self::FAILURE;

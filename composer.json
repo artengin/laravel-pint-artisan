@@ -28,7 +28,8 @@
     "require-dev": {
         "laravel/framework": "^12.0",
         "phpunit/phpunit": "^12.5",
-        "orchestra/testbench": "^10.8"
+        "orchestra/testbench": "^10.8",
+        "ronasit/laravel-helpers": "^3.5"
     },
     "extra": {
         "laravel": {
