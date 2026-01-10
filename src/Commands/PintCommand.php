@@ -1,6 +1,6 @@
 <?php
 
-namespace Artengin\LaravelPintArtisan;
+namespace Artengin\LaravelPintArtisan\Commands;
 
 use Illuminate\Console\Command;
 use RuntimeException;

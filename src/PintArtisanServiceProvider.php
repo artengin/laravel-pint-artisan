@@ -2,19 +2,18 @@
 
 namespace Artengin\LaravelPintArtisan;
 
+use Artengin\LaravelPintArtisan\Commands\PintCommand;
 use Illuminate\Support\ServiceProvider;
 
 class PintArtisanServiceProvider extends ServiceProvider
 {
-    public function register(): void
+    /**
+     * Boots application services.
+     */
+    public function boot(): void
     {
         $this->commands([
             PintCommand::class,
         ]);
-    }
-
-    public function boot(): void
-    {
-        //
     }
 }
