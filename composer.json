@@ -1,0 +1,34 @@
+{
+    "name": "artengin/laravel-pint-artisan",
+    "description": "Run Laravel Pint through Artisan, supporting all paths, flags, and options.",
+    "keywords": ["console",  "command-line", "php", "cli", "laravel", "pint", "artisan", "dev", "lint"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Artyom Osepyan",
+            "email": "art@osepyan.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Artengin\\LaravelPintArtisan\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "symfony/console": "^7.3.0"
+    },
+    "require-dev": {
+        "laravel/framework": "^12.0",
+        "laravel/pint": "^1.25"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Artengin\\LaravelPintArtisan\\PintArtisanServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
