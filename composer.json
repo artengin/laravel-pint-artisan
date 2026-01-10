@@ -15,13 +15,20 @@
             "Artengin\\LaravelPintArtisan\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Artengin\\LaravelPintArtisan\\Tests\\": "tests/"
+        }
+    },
     "require": {
         "php": "^8.2",
         "laravel/pint": "^1.25",
         "symfony/console": "^7.3.0"
     },
     "require-dev": {
-        "laravel/framework": "^12.0"
+        "laravel/framework": "^12.0",
+        "phpunit/phpunit": "^12.5",
+        "orchestra/testbench": "^10.8"
     },
     "extra": {
         "laravel": {
