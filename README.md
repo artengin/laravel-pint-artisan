@@ -1,6 +1,6 @@
 # Laravel Pint Artisan
 
-Run [Laravel Pint](https://laravel.com/docs/pint) through Artisan console using the `php artisan pint` command, with full support for all arguments, flags, and file paths.
+Run [Laravel Pint](https://laravel.com/docs/pint) via the Artisan console using the `php artisan pint` command, with full support for all arguments, flags, and file paths.
 
 ## Requirements
 
