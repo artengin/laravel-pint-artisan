@@ -31,7 +31,7 @@ jobs:
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Format code style via Pint
-        run: vendor/bin/pint --repair
+        run: vendor/bin/pint --test
 
       - name: Execute unit tests via PHPUnit
         run: vendor/bin/phpunit
