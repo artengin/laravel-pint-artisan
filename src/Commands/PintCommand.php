@@ -2,10 +2,9 @@
 
 namespace Artengin\LaravelPintArtisan\Commands;
 
+use Artengin\LaravelPintArtisan\ProcessRunner;
 use Illuminate\Console\Command;
-use RuntimeException;
-use Symfony\Component\Process\Exception\ProcessSignaledException;
-use Symfony\Component\Process\Process;
+use Symfony\Component\Console\Input\ArgvInput;
 
 class PintCommand extends Command
 {
@@ -28,7 +27,7 @@ class PintCommand extends Command
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(protected ProcessRunner $processRunner)
     {
         parent::__construct();
 
@@ -40,9 +39,9 @@ class PintCommand extends Command
      */
     public function handle(): int
     {
-        $argv = $_SERVER['argv'];
-
-        $options = array_slice($argv, 2);
+        /** @var ArgvInput $argvInput */
+        $argvInput = $this->input;
+        $options = $argvInput->getRawTokens(true);
 
         $binary = 'vendor/bin/pint';
 
@@ -52,28 +51,9 @@ class PintCommand extends Command
             return self::FAILURE;
         }
 
-        $process = new Process(array_merge([PHP_BINARY, $binary], $options));
-
-        $process->setTimeout(null);
-
-        try {
-            $process->setTty(true);
-        } catch (RuntimeException $e) {
-            // TTY is not available
-        }
-
-        $exitCode = self::FAILURE;
-
-        try {
-            $exitCode = $process->run(function ($type, $line) {
-                $this->output->write($line);
-            });
-        } catch (ProcessSignaledException $e) {
-            if (extension_loaded('pcntl') && $e->getSignal() !== SIGINT) {
-                throw $e;
-            }
-        }
-
-        return $exitCode;
+        return $this->processRunner->run(
+            array_merge([PHP_BINARY, $binary], $options),
+            fn ($type, $line) => $this->output->write($line),
+        );
     }
 }
