@@ -21,7 +21,7 @@
         }
     },
     "require": {
-        "php": "^8.3",
+        "php": "^8.2.0",
         "laravel/pint": "^1.25",
         "symfony/console": "^7.3.0"
     },
