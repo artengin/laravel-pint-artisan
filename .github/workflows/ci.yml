@@ -2,11 +2,9 @@ name: Tests
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   tests:
@@ -26,6 +24,7 @@ jobs:
           php-version: ${{ matrix.php-version }}
           extensions: pcntl
           tools: composer
+          coverage: pcov
 
       - name: Install dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
@@ -44,18 +43,22 @@ jobs:
           path: build/logs
 
   upload-to-coveralls:
-    needs: tests-with-coverage
+    needs: tests
     runs-on: ubuntu-latest
+
     steps:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
+
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Import coverage report
         uses: actions/download-artifact@v4
         with:
           name: clover.xml
           path: build/logs
+
       - name: Upload coverage results to Coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
