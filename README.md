@@ -1,6 +1,5 @@
 [![Actions Status](https://github.com/artengin/laravel-pint-artisan/actions/workflows/ci.yml/badge.svg)](https://github.com/artengin/laravel-pint-artisan/actions) 
 [![Coverage Status](https://coveralls.io/repos/github/artengin/laravel-pint-artisan/badge.svg)](https://coveralls.io/github/artengin/laravel-pint-artisan)
-[![Latest Stable Version](http://poser.pugx.org/artengin/laravel-pint-artisan/v)](https://packagist.org/packages/artengin/laravel-pint-artisan) 
 [![License](http://poser.pugx.org/artengin/laravel-pint-artisan/license)](https://packagist.org/packages/artengin/laravel-pint-artisan)  
 
 # Laravel Pint Artisan
