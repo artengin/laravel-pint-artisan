@@ -8,9 +8,9 @@ Run [Laravel Pint](https://laravel.com/docs/pint) via the Artisan console using 
 
 ## Requirements
 
-- PHP 8.3+
+- PHP 8.2+
 - Laravel 12.0+
-- Laravel Pint 1.25+
+- Laravel Pint 1.22+
 
 ## Installation
 
