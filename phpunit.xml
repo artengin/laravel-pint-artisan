@@ -9,5 +9,9 @@
         <include>
             <directory suffix=".php">./src</directory>
         </include>
+
+        <exclude>
+            <file>src/ProcessRunner.php</file>
+        </exclude>
     </source>
 </phpunit>
