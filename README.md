@@ -1,3 +1,8 @@
+[![Actions Status](https://github.com/artengin/laravel-pint-artisan/actions/workflows/ci.yml/badge.svg)](https://github.com/artengin/laravel-pint-artisan/actions)
+[![Latest Stable Version](http://poser.pugx.org/artengin/laravel-pint-artisan/v)](https://packagist.org/packages/artengin/laravel-pint-artisan) 
+[![Total Downloads](http://poser.pugx.org/artengin/laravel-pint-artisan/downloads)](https://packagist.org/packages/artengin/laravel-pint-artisan)
+[![License](http://poser.pugx.org/artengin/laravel-pint-artisan/license)](https://packagist.org/packages/artengin/laravel-pint-artisan)  
+
 # Laravel Pint Artisan
 
 Run [Laravel Pint](https://laravel.com/docs/pint) via the Artisan console using the `php artisan pint` command, with full support for all arguments, flags, and file paths.
