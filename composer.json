@@ -29,8 +29,8 @@
         "laravel/framework": "^12.0",
         "phpunit/phpunit": "^11.5.3",
         "orchestra/testbench": "^10.8",
-        "ronasit/laravel-helpers": "^3.5",
-        "php-coveralls/php-coveralls": "^2.9"
+        "php-coveralls/php-coveralls": "^2.9",
+        "php-mock/php-mock-phpunit": "^2.14"
     },
     "extra": {
         "laravel": {
