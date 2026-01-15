@@ -22,12 +22,12 @@
     },
     "require": {
         "php": "^8.2.0",
-        "laravel/pint": "^1.25",
+        "laravel/pint": "^1.22",
         "symfony/console": "^7.3.0"
     },
     "require-dev": {
         "laravel/framework": "^12.0",
-        "phpunit/phpunit": "^12.5",
+        "phpunit/phpunit": "^11.5.3",
         "orchestra/testbench": "^10.8",
         "ronasit/laravel-helpers": "^3.5",
         "php-coveralls/php-coveralls": "^2.9"
